@@ -43,7 +43,7 @@ class TokenOptionsBuilder
      * @param OpenViduRoleEnum $role
      * @return self
      */
-    public function setRole(OpenViduRoleEnum $role): self
+    public function setRole($role): self
     {
         $this->role = $role;
         return $this;

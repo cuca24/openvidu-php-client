@@ -205,7 +205,7 @@ class OpenVidu
      */
     public function getActiveSessions(): array
     {
-        return clone $this->activeSessions;
+        return $this->activeSessions;
     }
 
     /**
@@ -216,6 +216,7 @@ class OpenVidu
     {
         try {
             $jsonArraySessions = $this->restClient->get(self::SESSIONS_URL)->getArrayInArrayKey('content');
+
 
             // Set to store fetched sessionIds and later remove closed sessions
             $fetchedSessionIds = [];
